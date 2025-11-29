@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 300e5495d0306f472c1aa34a522273e3066b9f50d3eb25cee17cd3b6177eea54
 
 build:
-  noarch: python
+  noarch: python>={{ python_min }}
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -37,7 +37,7 @@ test:
     - wxmplot
 
 about:
-  home: http://newville.github.io/wxmplot
+  home: https://newville.github.io/wxmplot
   license: MIT
   license_file: LICENSE
   summary: wxPython plotting widgets using matplotlib
