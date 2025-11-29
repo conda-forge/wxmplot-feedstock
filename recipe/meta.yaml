@@ -24,12 +24,12 @@ requirements:
     - matplotlib >=3.9
     - pytz
     - numpy >=1.26
-    - pyyaml >= 5.0
+    - pyyaml >=5.0
     - darkdetect
     - wxpython >=4.2.0
-    - wxutils >= 0.3.3
-    - pyshortcuts >= 1.9.5
-    - Pillow >= 7.0
+    - wxutils >=0.3.3
+    - pyshortcuts >=1.9.5
+    - Pillow >=7.0
 
 test:
   imports:
