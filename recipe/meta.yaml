@@ -1,5 +1,5 @@
-	{% set name = "wxmplot" %}
-	{% set version = "2025.1.6" %}
+{% set name = "wxmplot" %}
+{% set version = "2025.1.6" %}
 {% set python_min = "3.10" %}
 
 package:
