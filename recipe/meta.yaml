@@ -1,12 +1,13 @@
 {% set name = "wxmplot" %}
 {% set version = "2025.1.6" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: {{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 300e5495d0306f472c1aa34a522273e3066b9f50d3eb25cee17cd3b6177eea54
 
 build:
@@ -16,15 +17,15 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python >={{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.10
-    - matplotlib >=3.9
+    - python >={{ python_min }}
+    - matplotlib-base >=3.9
     - pytz
     - numpy >=1.26
-    - pyyaml >=5.0
+    - pyyaml>=5.0
     - darkdetect
     - wxpython >=4.2.0
     - wxutils >=0.3.3
@@ -40,7 +41,7 @@ about:
   license: MIT
   license_file: LICENSE
   summary: wxPython plotting widgets using matplotlib
-  doc_url: http://newville.github.io/wxmplot
+  doc_url: https://newville.github.io/wxmplot
   dev_url: https://github.com/newville/wxmplot
 
 extra:
