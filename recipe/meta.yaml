@@ -1,46 +1,55 @@
 {% set name = "wxmplot" %}
-{% set version = "0.9.59" %}
+{% set version = "2025.1.6" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5f638aa9d005ece0916f60ff1a28532689c4a0f88f9245079fda5cdba54215bd
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 43846b3d5e74661cbecd1847e93e4e188ce29c53d4ca570e9cf8c7cb8b57dd20
 
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python >={{ python_min }}
     - pip
+    - setuptools
+    - setuptools-scm
   run:
-    - python >=3.6
-    - matplotlib-base >=2.0
-    - numpy >=1.12
-    - pyyaml
-    - six >=1.10
-    - wxpython >=4.0.3
-    - wxutils
+    - python >={{ python_min }}
+    - setuptools
+    - setuptools-scm
+    - matplotlib-base >=3.9
+    - pytz
+    - numpy >=1.26
+    - pyyaml >=5.0
+    - darkdetect
+    - wxpython >=4.2.0
+    - wxutils >=0.3.3
+    - pyshortcuts >=1.9.5
+    - Pillow >=7.0
 
 test:
   imports:
     - wxmplot
 
 about:
-  home: http://newville.github.io/wxmplot
+  home: https://newville.github.io/wxmplot
   license: MIT
   license_file: LICENSE
   summary: wxPython plotting widgets using matplotlib
-  doc_url: http://newville.github.io/wxmplot
+  doc_url: https://newville.github.io/wxmplot
   dev_url: https://github.com/newville/wxmplot
 
 extra:
   recipe-maintainers:
     - mrakitin
     - kbeeperez
+    - newville
     - conda-forge/event-model
