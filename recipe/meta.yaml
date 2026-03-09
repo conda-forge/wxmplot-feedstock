@@ -31,7 +31,6 @@ requirements:
     - pyyaml >=5.0
     - darkdetect
     - wxpython >=4.2.0
-    - wxutils >=2026.1.0
     - pyshortcuts >=1.9.5
     - Pillow >=7.0
 
