@@ -26,12 +26,12 @@ requirements:
     - setuptools
     - setuptools-scm
     - matplotlib-base >=3.9
-    - pytz
+    - pytz >=2025.2
     - numpy >=1.26
     - pyyaml >=5.0
     - darkdetect
     - wxpython >=4.2.0
-    - wxutils >=0.3.3
+    - wxutils >=2026.1.0
     - pyshortcuts >=1.9.5
     - Pillow >=7.0
 
@@ -52,4 +52,5 @@ extra:
     - mrakitin
     - kbeeperez
     - newville
+    - maurov
     - conda-forge/event-model
