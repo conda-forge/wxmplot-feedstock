@@ -1,5 +1,5 @@
 {% set name = "wxmplot" %}
-{% set version = "2025.1.6" %}
+{% set version = "2026.1.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 43846b3d5e74661cbecd1847e93e4e188ce29c53d4ca570e9cf8c7cb8b57dd20
+  sha256: 0f47519fb9d1b63555b5ccd5e4b52388db7fdf81748bb842ad57adc81bac7b30
 
 build:
   noarch: python
@@ -24,13 +24,15 @@ requirements:
     - setuptools_scm >=6.2
   run:
     - python >={{ python_min }}
+    - setuptools
+    - setuptools-scm
     - matplotlib-base >=3.10
-    - pytz
+    - pytz >=2025.2
     - numpy >=2
     - pyyaml >=5.0
     - darkdetect
     - wxpython >=4.2.2
-    - wxutils >=0.3.6
+    - wxutils >=2026.1.0
     - pyshortcuts >=1.9.5
     - Pillow >=7.0
 
