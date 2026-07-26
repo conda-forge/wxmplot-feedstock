@@ -31,9 +31,9 @@ requirements:
     - numpy >=2
     - pyyaml >=5.0
     - darkdetect
-    - wxpython >=4.2.2
-    - wxutils >=2026.1.0
-    - pyshortcuts >=1.9.5
+    - wxpython >=4.2.3
+    - wxutils >=2026.3.0
+    - pyshortcuts >=1.9.8
     - Pillow >=7.0
 
 test:
